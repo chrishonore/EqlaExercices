@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
+//use Illuminate\Http\Request;
 use App\Models\Question;
-use App\Models\ques_vote;
-use Illuminate\Http\Request;
+//use App\Models\ques_vote;
 
 class QuestionsController extends Controller
 {
 
-    public function index()
+    private function index()
     {
         $imageCompetitions = Question::all(); // Récupère toutes les questions
         return view('imagesCompetition', compact('imageCompetitions'));
